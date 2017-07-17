@@ -143,7 +143,7 @@ $site_device_scan = @"
 
         } until ($scan_status -eq "finished") 
 
-        # get a list of all derice ids in our site
+        # get a list of all device ids in our site
         $site_device_listing = "<SiteDeviceListingRequest session-id='$session_id' sync-id='$sync_id' site-id='$site_id'/>"
         $response_site_device_listing = Invoke-WebRequest -URI $uri -Body $site_device_listing -ContentType 'text/xml' -Method post
 
