@@ -15,7 +15,8 @@
         $build_admin
 
     )
-
+    
+    # get SMA assets
     $credentials = Get-AutomationPSCredential -name 'my_creds'
     $Rapid7_Prod_Site = Get-AutomationVariable -Name 'Rapid7_PROD_Site'
     $Rapid7_DEVQA_Site = Get-AutomationVariable -Name 'Rapid7_QA_Site'
