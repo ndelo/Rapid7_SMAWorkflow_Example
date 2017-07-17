@@ -57,7 +57,6 @@ add-type @"
         [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
 
         # log into nexpose api
-
         $login = "<LoginRequest user-id='$user' password='$password' />"
         $login_response = Invoke-WebRequest -URI $uri -Body $login -ContentType 'text/xml' -Method post
         $session_id = $login_response.Content | select-xml -XPath '//LoginResponse' | % {$_.node.'session-id'}
